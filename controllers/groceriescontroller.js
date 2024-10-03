@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const { findingredientid,listfindingredientid } = require("../puppeteer/matchdatabase");
+=======
+const { findingredientid } = require("../puppeteer/matchdatabase");
+>>>>>>> new-origin/main
 
 module.exports.groceries_post = async (req, res) => {
   try {
@@ -10,6 +14,7 @@ module.exports.groceries_post = async (req, res) => {
     console.error("Error fetching ingredient results:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
+<<<<<<< HEAD
 };
 
 
@@ -23,4 +28,6 @@ module.exports.grocerieslist_post = async (req, res) => {
     console.error("Error fetching ingredient results:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
+=======
+>>>>>>> new-origin/main
 };

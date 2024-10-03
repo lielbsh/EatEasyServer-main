@@ -141,3 +141,14 @@ const hreflist=[
     }
 ]
 
+<<<<<<< HEAD
+=======
+
+// async function logthem (){
+//     for (const result of hreflist) {
+//         const recipe = await extractRecipe(result.href);
+//         console.log(recipe['directions']);
+//     }
+// }
+// logthem()
+>>>>>>> new-origin/main

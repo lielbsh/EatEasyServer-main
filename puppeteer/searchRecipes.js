@@ -21,9 +21,17 @@ const puppeteer=require('puppeteer')
         }).filter(result => result !== undefined);
     })
     await browser.close()
+<<<<<<< HEAD
     
     return(searchresults)
     
+=======
+    if (searchresults.length==0){
+        return('No recipes found.')
+    }else{
+    return(searchresults)
+    }
+>>>>>>> new-origin/main
 }
 
 module.exports={searchRecipes}

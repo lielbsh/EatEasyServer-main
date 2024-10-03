@@ -41,12 +41,20 @@ module.exports.logoutfromuser_delete= (req, res) => {
 }
 
 module.exports.updatedata_post=async (req,res)=>{
+<<<<<<< HEAD
     console.log('updating')
     let {Recipe}=await getrecipes(req)
     const {changes}=req.body;
     changes.forEach(change => {
       let changehref=change[1].href
       Recipe.findOneAndDelete({href: changehref})
+=======
+    let {Recipe}=await getrecipes(req)
+    const {changes}=req.body;
+    changes.forEach(change => {
+      let changelink=change[1].link
+      Recipe.findOneAndDelete({link: changelink})
+>>>>>>> new-origin/main
         .then(data=>{
           if (change[0]!='DELETE'){
             let recipe= new Recipe(change[1])
@@ -78,11 +86,17 @@ module.exports.updategroceries_post= async (req, res) => {
       let pass = user.password;
       let mail = user.email;
       let previous = user.previousmails;
+<<<<<<< HEAD
       let userid=user._id
       await User.findOneAndDelete({ username: name });
 
       let newUser = new User({
           _id:userid,
+=======
+      await User.findOneAndDelete({ username: name });
+
+      let newUser = new User({
+>>>>>>> new-origin/main
           username: name,
           password: pass,
           email: mail,
